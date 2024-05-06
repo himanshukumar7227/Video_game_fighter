@@ -7,8 +7,11 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 public class MouseInputs implements MouseListener, MouseMotionListener {
-    private GamePanel gamePanel;
+    private GamePanel gamePanel;//as we have imported this module we used 'this ' in
+    //gamePannel.
     public MouseInputs(GamePanel gamePanel){
+        //we are calling gamePanel here so that we can
+        //use its methods.
         this.gamePanel=gamePanel;
     }
 
@@ -39,6 +42,8 @@ public class MouseInputs implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        //this code will move the rectangle when and where we drag the
+        //cursor
         gamePanel.setRectPos(e.getX(),e.getY());
     }
 

@@ -1,7 +1,6 @@
 package inputs;
 
 import main.GamePanel;
-
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -9,6 +8,8 @@ public class keyboardInputs implements KeyListener {
 
     private GamePanel gamePanel;
     public keyboardInputs(GamePanel gamePanel){
+        //As we did in mouseListner for using methods of gamPannel we are
+        // initializing and calling gampanel here.
         this.gamePanel=gamePanel;
     }
 
@@ -19,6 +20,8 @@ public class keyboardInputs implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        //For this useage of method and control the movement
+        //we imported gamePannel.
         switch (e.getKeyCode()){
             case KeyEvent.VK_W:
                 gamePanel.changeyDelta(-5);
